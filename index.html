@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b6b1f69e20.js" crossorigin="anonymous"></script>
+    <title>Form program</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <p>JavaScript exercise 2</p>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav__ul">
+                <li id="numOfQuestions"></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="questions-section">
+            <div class="questions-section__header">
+                <div class="questions-section-filters">
+                    <div class="questions-section__select">
+                        <select name="filter" id="filter" class="select">
+                            <option value="all">All</option>
+                            <option value="html">HTML</option>
+                            <option value="css">CSS</option>
+                            <option value="js">JS</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="askBtn">Ask question</button>
+            </div>
+            <div class="questions-section__content">
+            </div>
+        </section>
+
+        <!-- Pop-up form -->
+        <div class="layer">
+            <div class="modal active">
+                <div class="modal__header">
+                    <span class="close">&times;</span>
+                </div>
+                <div class="modal__content">
+                    <form id="form">
+                        <div class="modal__content__input">
+                            <label for="popupName">Ask your question:</label>
+                            <textarea id="question" name="question" rows="5"></textarea>
+                        </div>
+                        <div class="modal__content__select">
+                            <label for="">Category:</label>
+                            <select name="category" id="category" class="select">
+                                <option value="category" disabled selected>Choose</option>
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="js">JS</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal__content__butttons">
+                    <button class="btn" id="cancel">Cancel</button>
+                    <button class="btn btn-primary" id="saveBtn">Save</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
