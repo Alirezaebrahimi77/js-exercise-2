@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Format date => 23.10.2022 klo 18:43:12
   const formatDate = (string) => {
     let result = "";
-    result += string.slice(0, 10) + " klo " + string.slice(11, 19)
+    result += string.slice(0, 10) + " klo " + (Number(string.slice(11, 13)) + Number(3)) + ":" + string.slice(14, 19)
     return result;
   }
   // Save data, update localStorage, sort them and load.
